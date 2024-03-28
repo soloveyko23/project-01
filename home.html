@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240328153218">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.fls-preloader {
+			pointer-events: none;
+			z-index: 5;
+			background-color: #fff;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Блок з елементами */
+		.fls-preloader__body {
+			padding: 0.93rem;
+			max-width: 31.25rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-family: Gilroy;
+			font-weight: 600;
+		}
+
+		/* Блок з лічильником */
+		.fls-preloader__counter {
+			display: none;
+			font-size: 1.5rem;
+		}
+
+		/* Прогресбар */
+		.fls-preloader__logo {
+			margin-bottom: 10px;
+		}
+
+		.fls-preloader__progressbar {
+			width: 100%;
+		}
+
+		/* Лінія прогресбару */
+		.fls-preloader__line span {
+			display: inline-block;
+			transition: width 0.2s ease;
+			height: 0.3rem;
+			background-color: #004E9E;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<div class="wrapper__page">
+			<aside class="sidebar">
+				<div class="sidebar-menu">
+					<div class="sidebar-menu__body">
+						<a href="#" class="sidebar-menu__logo">
+							LOGO
+
+						</a>
+						<div class="sidebar-menu__menu menu">
+
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li>
+										<a href="#">
+											О компании
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+
+											</i>
+										</a>
+										<ul class="sub-menu">
+											<li class="link-back">
+												<a href="#"><i>
+														<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+															<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+														</svg>
+													</i> Назад</a>
+											</li>
+											<li>
+												<a href="#">
+													О компании
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Клиентам
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Инвесторам
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Поставщикам
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">
+											Клиентам
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+										<ul class="sub-menu">
+											<li class="link-back">
+												<a href="#"><i>
+														<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+															<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+														</svg>
+													</i> Назад</a>
+											</li>
+											<li>
+												<a href="#">
+													О компании 3
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Клиентам 2
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Инвесторам 1
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Поставщикам 6
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">
+											Поставщикам
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Инвесторам
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Лицензии
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Продукция и услуги
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Карьера
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Пресс центр
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Контакты
+											<i class="menu__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+													<path d="M1 1L7 7L1 13" stroke="#004E9E" stroke-width="2" />
+												</svg>
+											</i>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</aside>
+
+
+			<div class="wrapper__content">
+				<header class="header">
+					<div class="header__container margin-container">
+						<div class="header__content">
+							<div class="header__body">
+								<button type="button" class="menu__icon icon-menu"><span></span></button>
+								<div class="header__search search-block">
+									<div class="search-block__input">
+										<input autocomplete="off" type="text" name="form[]" placeholder="Поиск по сайту" class="input-search">
+										<button class="button-search button-blue">
+
+											<svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M24.5893 22.6177L19.8686 17.9109C21.3917 15.9705 22.2181 13.5743 22.2151 11.1075C22.2151 8.91067 21.5636 6.76315 20.3431 4.93652C19.1226 3.1099 17.3878 1.68622 15.3582 0.845515C13.3286 0.00481268 11.0952 -0.215153 8.94056 0.213433C6.78591 0.64202 4.80674 1.69991 3.25333 3.25333C1.69991 4.80674 0.64202 6.78591 0.213433 8.94056C-0.215153 11.0952 0.00481268 13.3286 0.845515 15.3582C1.68622 17.3878 3.1099 19.1226 4.93652 20.3431C6.76315 21.5636 8.91067 22.2151 11.1075 22.2151C13.5743 22.2181 15.9705 21.3917 17.9109 19.8686L22.6177 24.5893C22.7468 24.7194 22.9004 24.8227 23.0695 24.8932C23.2387 24.9637 23.4202 25 23.6035 25C23.7868 25 23.9683 24.9637 24.1375 24.8932C24.3067 24.8227 24.4602 24.7194 24.5893 24.5893C24.7194 24.4602 24.8227 24.3067 24.8932 24.1375C24.9637 23.9683 25 23.7868 25 23.6035C25 23.4202 24.9637 23.2387 24.8932 23.0695C24.8227 22.9004 24.7194 22.7468 24.5893 22.6177ZM2.77689 11.1075C2.77689 9.45989 3.26547 7.84924 4.18085 6.47928C5.09624 5.10931 6.39731 4.04155 7.91953 3.41102C9.44176 2.78049 11.1168 2.61552 12.7328 2.93696C14.3488 3.2584 15.8331 4.05182 16.9982 5.21688C18.1633 6.38194 18.9567 7.86632 19.2781 9.48231C19.5996 11.0983 19.4346 12.7733 18.8041 14.2955C18.1735 15.8178 17.1058 17.1188 15.7358 18.0342C14.3658 18.9496 12.7552 19.4382 11.1075 19.4382C8.89811 19.4382 6.77918 18.5605 5.21688 16.9982C3.65458 15.4359 2.77689 13.317 2.77689 11.1075Z" fill="#CFE3F8" />
+											</svg>
+
+											Поиск
+
+										</button>
+									</div>
+								</div>
+								<div class="header__phone">
+									<a href="tel:+73432895007">+7 <span>(343)</span> 289-5-007</a>
+								</div>
+								<button class="header__button-search search-button">
+
+								</button>
+								<div class="header__provider">
+
+								</div>
+								<div class="header__languages languages">
+									<ul>
+										<li>
+											<a href="#" class="">RU</a>
+										</li>
+										<li>
+											<a href="#" class="active">EN</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="header-search-block " hidden>
+							<div class="search-block-2 search-content">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Поиск по продукции" class="input">
+								<div class="search-block__button">
+									<a href="#" class="button button-blue--border mw-155 button-size--s" data-ripple="">
+										<span class="circle" style="left: 116px; top: 22.3906px;"></span>
+										<span class="button__text">Поиск</span>
+
+									</a>
+								</div>
+							</div>
+
+
+						</div>
+
+					</div>
+				</header>
+				<main class="page">
+					<section class="hero" id="hero">
+
+						<div class="main-slider">
+							<div class="main-slider__body">
+								<!-- Оболонка слайдера -->
+								<div class="main-slider__slider swiper">
+									<!-- Частина слайдера, що рухається -->
+									<div class="main-slider__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<div class="main-slider__slide swiper-slide">
+											<div class="main-slider__item">
+												<div class="main-slider__image" data-swiper-parallax="50%" data-swiper-parallax-scale="1.35">
+													<img src="img/main-slider/image.png" alt="01">
+												</div>
+												<div class="main-slider__icon">
+
+												</div>
+												<div class="main-slider__content">
+													<div class="main-slider__content-wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="300">
+														<h1 class="main-slider__title title-h1 title-anim-h1">
+															опытный и надежный деловой партнер
+														</h1>
+														<div class="main-slider__features">
+															<div class="main-slider__features-item">
+																<div class="icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+																		<rect width="40" height="40" rx="6" fill="white" />
+																		<path d="M27.8948 9H17.3685C16.2075 9 15.2633 9.94185 15.2633 11.1V16.9653L10.3086 21.9077C10.0076 22.208 9.91704 22.6595 10.0802 23.0522C10.2434 23.4449 10.6276 23.7 11.0528 23.7V28.95C11.0528 29.5306 11.5244 30 12.1054 30H28.9474C29.5295 30 30 29.5306 30 28.95V11.1C30 9.94185 29.0558 9 27.8948 9ZM19.4738 27.9H13.1581V22.0347L16.3159 18.8847L19.4738 22.0347V27.9ZM27.8948 27.9H21.579V23.7C22.0043 23.7 22.3895 23.4449 22.5517 23.0522C22.7148 22.6595 22.6243 22.208 22.3232 21.9077L17.3685 16.9653V11.1H27.8948V27.9Z" fill="#004E9E" />
+																		<path d="M19.4738 13.2H21.579V15.3H19.4738V13.2ZM23.6843 13.2H25.7895V15.3H23.6843V13.2ZM23.6843 17.4326H25.7895V19.5H23.6843V17.4326ZM23.6843 21.6H25.7895V23.7H23.6843V21.6ZM15.2633 22.65H17.3685V24.75H15.2633V22.65Z" fill="#004E9E" />
+																	</svg>
+																</div>
+																<div class="desc">
+																	Строительство <br>
+																	и производство
+																</div>
+															</div>
+															<div class="main-slider__features-item">
+																<div class="icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+																		<rect width="40" height="40" rx="6" fill="white" />
+																		<path d="M25.7578 15.3218L19.2154 10L15.3254 10.9345M25.7578 15.3218L27.0424 19.5699L20.9221 20.7705M25.7578 15.3218L21.6083 16.1917L20.9221 20.7705M20.9221 20.7705L13.8159 14.1183L15.3254 10.9345M15.3254 10.9345L21.6082 16.4618M20.771 23.6134L22.0529 27.69L15.5048 29L9 22.4568L10.4413 18.7785M10.4413 18.7785L13.5017 18.0462M10.4413 18.7785L16.4485 24.6123M15.5048 28.7042L16.562 24.2523L20.7697 23.6253M26.3185 22.7986L25.8213 26.9396L31 25.9024L29.904 21.981L26.3185 22.7986Z" stroke="#004E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+																	</svg>
+																</div>
+																<div class="desc">
+																	Поставка металлопроката <br>
+																	трубной продукции
+																</div>
+															</div>
+														</div>
+														<div class="main-slider__more-btn">
+															<a href="#" class="button button-blue mw-250 button-with-arrow">
+																<span>Подробнее</span>
+																<i>
+																	<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																		<path d="M11.5281 0.991615C11.5235 0.577427 11.184 0.245427 10.7698 0.250072L4.02019 0.325765C3.606 0.33041 3.274 0.66994 3.27865 1.08413C3.28329 1.49832 3.62282 1.83032 4.03701 1.82567L10.0366 1.75839L10.1039 7.75801C10.1086 8.1722 10.4481 8.5042 10.8623 8.49955C11.2765 8.49491 11.6085 8.15538 11.6038 7.74119L11.5281 0.991615ZM1.53624 11.5243L11.3144 1.52437L10.2419 0.475675L0.463756 10.4757L1.53624 11.5243Z" fill="#004E9E" />
+																	</svg>
+																</i>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Слайд -->
+										<div class="main-slider__slide swiper-slide">
+											<div class="main-slider__item">
+												<div class="main-slider__image" data-swiper-parallax="50%" data-swiper-parallax-scale="1.35">
+													<img src="img/main-slider/slide-2.jpg" alt="01">
+												</div>
+												<div class="main-slider__icon">
+
+												</div>
+												<div class="main-slider__content">
+													<div class="main-slider__content-wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="300">
+														<h1 class="main-slider__title title-h1 title-anim-h1">
+															опытный и надежный деловой партнер 2
+														</h1>
+														<div class="main-slider__features">
+															<div class="main-slider__features-item">
+																<div class="icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+																		<rect width="40" height="40" rx="6" fill="white" />
+																		<path d="M27.8948 9H17.3685C16.2075 9 15.2633 9.94185 15.2633 11.1V16.9653L10.3086 21.9077C10.0076 22.208 9.91704 22.6595 10.0802 23.0522C10.2434 23.4449 10.6276 23.7 11.0528 23.7V28.95C11.0528 29.5306 11.5244 30 12.1054 30H28.9474C29.5295 30 30 29.5306 30 28.95V11.1C30 9.94185 29.0558 9 27.8948 9ZM19.4738 27.9H13.1581V22.0347L16.3159 18.8847L19.4738 22.0347V27.9ZM27.8948 27.9H21.579V23.7C22.0043 23.7 22.3895 23.4449 22.5517 23.0522C22.7148 22.6595 22.6243 22.208 22.3232 21.9077L17.3685 16.9653V11.1H27.8948V27.9Z" fill="#004E9E" />
+																		<path d="M19.4738 13.2H21.579V15.3H19.4738V13.2ZM23.6843 13.2H25.7895V15.3H23.6843V13.2ZM23.6843 17.4326H25.7895V19.5H23.6843V17.4326ZM23.6843 21.6H25.7895V23.7H23.6843V21.6ZM15.2633 22.65H17.3685V24.75H15.2633V22.65Z" fill="#004E9E" />
+																	</svg>
+																</div>
+																<div class="desc">
+																	Строительство <br>
+																	и производство
+																</div>
+															</div>
+															<div class="main-slider__features-item">
+																<div class="icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+																		<rect width="40" height="40" rx="6" fill="white" />
+																		<path d="M25.7578 15.3218L19.2154 10L15.3254 10.9345M25.7578 15.3218L27.0424 19.5699L20.9221 20.7705M25.7578 15.3218L21.6083 16.1917L20.9221 20.7705M20.9221 20.7705L13.8159 14.1183L15.3254 10.9345M15.3254 10.9345L21.6082 16.4618M20.771 23.6134L22.0529 27.69L15.5048 29L9 22.4568L10.4413 18.7785M10.4413 18.7785L13.5017 18.0462M10.4413 18.7785L16.4485 24.6123M15.5048 28.7042L16.562 24.2523L20.7697 23.6253M26.3185 22.7986L25.8213 26.9396L31 25.9024L29.904 21.981L26.3185 22.7986Z" stroke="#004E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+																	</svg>
+																</div>
+																<div class="desc">
+																	Поставка металлопроката <br>
+																	трубной продукции
+																</div>
+															</div>
+														</div>
+														<div class="main-slider__more-btn">
+															<a href="#" class="button button-blue mw-250 button-with-arrow">
+																<span>Подробнее</span>
+																<i>
+																	<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																		<path d="M11.5281 0.991615C11.5235 0.577427 11.184 0.245427 10.7698 0.250072L4.02019 0.325765C3.606 0.33041 3.274 0.66994 3.27865 1.08413C3.28329 1.49832 3.62282 1.83032 4.03701 1.82567L10.0366 1.75839L10.1039 7.75801C10.1086 8.1722 10.4481 8.5042 10.8623 8.49955C11.2765 8.49491 11.6085 8.15538 11.6038 7.74119L11.5281 0.991615ZM1.53624 11.5243L11.3144 1.52437L10.2419 0.475675L0.463756 10.4757L1.53624 11.5243Z" fill="#004E9E" />
+																	</svg>
+																</i>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slider-wrap">
+										<button type="button" class="swiper-button-prev">
+											<svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
+												<path d="M12 2L3 10.5L12 19" stroke="white" stroke-width="3" />
+											</svg>
+										</button>
+										<div class="swiper-counter swiper-counter-2">
+											<div class="swiper-pagination pagination--white"></div>
+										</div>
+										<button type="button" class="swiper-button-next">
+											<svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
+												<path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="3" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="slider-sidebar" data-watch>
+									<div class="card-factor" id="sidebar">
+										<div class="card-factor__wrapper">
+											<div class="card-factor__inner">
+												<div class="card-factor__items">
+													<div class="card-factor__item">
+														<div class="card-factor__item-top">
+															<div class="card-factor__number" data-digits-counter>
+																11,6
+															</div>
+															<div class="card-factor__sup">
+																млн.тонн
+															</div>
+														</div>
+														<div class="card-factor__bottom">
+															Объем производства стали
+														</div>
+													</div>
+													<div class="card-factor__item">
+														<div class="card-factor__item-top">
+															<div class="card-factor__number">
+																$<span data-digits-counter>6.4</span>
+															</div>
+															<div class="card-factor__sup">
+																млрд
+															</div>
+														</div>
+														<div class="card-factor__bottom">
+															Выручка Logo
+															за 2022 г
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- /.main-slider -->
+						<div class="hero-about padding-section-y-60">
+							<div class="hero-about__container margin-container">
+								<div class="hero-about__body">
+									<div class="hero-about__content">
+										<h2 class="hero-about__title title-h2">
+											Logo — КРУПНЕЙШАЯ СТРОИТЕЛЬНО- ТОРГОВАЯ КОМПАНИЯ В И
+										</h2>
+										<p class="hero-about__text text-01">
+											Компания «Logo» – это опытный и надежный деловой партнер, который занимается поставкой трубной
+											продукции и ведением строительно-монтажных работ. Мы ценим каждого нашего заказчика и уделяем
+											особое внимание высокому уровню сервиса, оперативности и исполнительности.
+
+										</p>
+										<div class="hero-about__more-btn">
+											<a href="#" class="button button-blue--border mw-250 button-with-arrow" data-ripple>
+												<span class="circle"></span>
+												<span class="button__text">
+													Подробнее
+												</span>
+												<i>
+													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+														<path d="M11.5281 0.991615C11.5235 0.577427 11.184 0.245427 10.7698 0.250072L4.02019 0.325765C3.606 0.33041 3.274 0.66994 3.27865 1.08413C3.28329 1.49832 3.62282 1.83032 4.03701 1.82567L10.0366 1.75839L10.1039 7.75801C10.1086 8.1722 10.4481 8.5042 10.8623 8.49955C11.2765 8.49491 11.6085 8.15538 11.6038 7.74119L11.5281 0.991615ZM1.53624 11.5243L11.3144 1.52437L10.2419 0.475675L0.463756 10.4757L1.53624 11.5243Z" fill="#004E9E"></path>
+													</svg>
+												</i>
+											</a>
+										</div>
+									</div>
+									<div class="slider-sidebar" data-watch>
+										<div class="card-factor" id="sidebar">
+											<div class="card-factor__wrapper">
+												<div class="card-factor__inner">
+													<div class="card-factor__items">
+														<div class="card-factor__item">
+															<div class="card-factor__item-top">
+																<div class="card-factor__number" data-digits-counter>
+																	11,6
+																</div>
+																<div class="card-factor__sup">
+																	млн.тонн
+																</div>
+															</div>
+															<div class="card-factor__bottom">
+																Объем производства стали
+															</div>
+														</div>
+														<div class="card-factor__item">
+															<div class="card-factor__item-top">
+																<div class="card-factor__number">
+																	$<span data-digits-counter>6.4</span>
+																</div>
+																<div class="card-factor__sup">
+																	млрд
+																</div>
+															</div>
+															<div class="card-factor__bottom">
+																Выручка Logo
+																за 2022 г
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					</section>
+					<!-- /.hero -->
+					<section class="activity-company padding-section-y-60">
+						<div class="activity-company__container margin-container">
+							<div class="activity-company__content">
+								<h2 class="activity-company__title title-h2">
+									ДЕЯТЕЛЬНОСТЬ КОМПАНИИ
+								</h2>
+								<div class="activity-company__body">
+									<a href="#" class="activity-company__item item">
+										<div class="item__body">
+											<div class="item__image">
+												<img src="img/activity-company/image1.png" alt="12">
+
+											</div>
+											<div class="item__content">
+												<h4 class="item__title">
+													Продажа
+													и транспортировка
+													трубной продукции
+												</h4>
+												<div class="item__button button-white--border button-white--size-m">
+													<span>Скачать референс лист</span>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="activity-company__item item">
+										<div class="item__body">
+											<div class="item__image">
+												<img src="img/activity-company/image2.png" alt="12">
+
+											</div>
+											<div class="item__content">
+												<h4 class="item__title">
+													Строительно-монтажные работ
+												</h4>
+												<div class="item__button button-white--border button-white--size-m">
+													<span>Скачать референс лист</span>
+												</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- /.activity-company -->
+					<section class="news padding-section-y-60">
+						<div class="news__container margin-container margin-container-right-none">
+							<div class="news__content">
+
+								<div class="news__header section-header header-between">
+									<h2 class="news__title title-h2">
+										НОВОСТИ КОМПАНИИ
+									</h2>
+									<div class="news__slider-navigation swiper-navigation">
+										<button type="button" class="swiper-button-prev-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+												<path d="M18.1026 9.17949L11.4103 15.5L18.1026 21.8205M0.999999 15.5C0.999999 23.5081 7.49187 30 15.5 30C23.5081 30 30 23.5081 30 15.5C30 7.49187 23.5081 1 15.5 1C7.49187 1 0.999999 7.49187 0.999999 15.5Z" stroke="#004E9E" stroke-width="2" />
+											</svg>
+										</button>
+										<button type="button" class="swiper-button-next-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+												<path d="M12.8974 9.17949L19.5897 15.5L12.8974 21.8205M30 15.5C30 23.5081 23.5081 30 15.5 30C7.49187 30 1 23.5081 1 15.5C1 7.49187 7.49187 1 15.5 1C23.5081 1 30 7.49187 30 15.5Z" stroke="#004E9E" stroke-width="2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="news__body">
+									<!-- Оболонка слайдера -->
+									<div class="news__slider swiper">
+										<!-- Частина слайдера, що рухається -->
+										<div class="news__wrapper swiper-wrapper">
+											<!-- Слайд -->
+											<article class="news__slide swiper-slide news-item">
+												<a href="#" class="news-item__link">
+													<div class="news-item__body">
+														<div class="news-item__date">
+															12 Марта 2023
+														</div>
+														<h5 class="news-item__name">
+															Logo примет участие
+															в выставке Vietnam Expo 2023
+														</h5>
+													</div>
+												</a>
+
+											</article>
+											<!-- Слайд -->
+											<article class="news__slide swiper-slide news-item">
+												<a href="#" class="news-item__link">
+													<div class="news-item__body">
+														<div class="news-item__date">
+															14 Апреля 2023
+														</div>
+														<h5 class="news-item__name">
+															Видеоэкскурсия Logoа получила награду конкурса «Лучшее корпоративное видео»
+														</h5>
+													</div>
+												</a>
+
+											</article>
+											<!-- Слайд -->
+											<article class="news__slide swiper-slide news-item">
+												<a href="#" class="news-item__link">
+													<div class="news-item__body">
+														<div class="news-item__date">
+															27 Апреля 2023
+														</div>
+														<h5 class="news-item__name">
+															Социальные инвестиции Logoа достигли нового рекорда
+														</h5>
+													</div>
+												</a>
+
+											</article>
+											<!-- Слайд -->
+											<article class="news__slide swiper-slide news-item">
+												<a href="#" class="news-item__link">
+													<div class="news-item__body">
+														<div class="news-item__date">
+															12 Марта 2023
+														</div>
+														<h5 class="news-item__name">
+															Logo примет участие
+															в выставке Vietnam Expo 2023
+														</h5>
+													</div>
+												</a>
+
+											</article>
+											<!-- Слайд -->
+											<article class="news__slide swiper-slide news-item">
+												<a href="#" class="news-item__link">
+													<div class="news-item__body">
+														<div class="news-item__date">
+															12 Марта 2023
+														</div>
+														<h5 class="news-item__name">
+															Logo примет участие
+															в выставке Vietnam Expo 2023
+														</h5>
+													</div>
+												</a>
+
+											</article>
+											<!-- Слайд -->
+											<article class="news__slide swiper-slide news-item">
+												<a href="#" class="news-item__link">
+													<div class="news-item__body">
+														<div class="news-item__date">
+															12 Марта 2023
+														</div>
+														<h5 class="news-item__name">
+															Logo примет участие
+															в выставке Vietnam Expo 2023
+														</h5>
+													</div>
+												</a>
+
+											</article>
+										</div>
+										<!-- Якщо потрібна пагінація -->
+										<div class="swiper-pagination"></div>
+										<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- /.news -->
+					<section class="alliance-appreciates">
+						<div class="alliance-appreciates__container margin-container margin-container-right-none">
+							<div class="alliance-appreciates__content">
+
+								<div class="alliance-appreciates__body">
+									<div class="alliance-appreciates__slider">
+										<div class="alliance-appreciates__slide slide-front">
+											<div class="slide-front__body">
+												<h2 class="slide-front__title title-h2">
+													Logo ценит качество
+													и высокий уровень
+													сервиса
+												</h2>
+												<div class="slide-front__button">
+													<a href="#" class="button button-blue--border mw-250 button-with-arrow" data-ripple>
+														<span class="circle"></span>
+														<span class="button__text">
+															Подробнее
+														</span>
+														<i>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M11.5281 0.991615C11.5235 0.577427 11.184 0.245427 10.7698 0.250072L4.02019 0.325765C3.606 0.33041 3.274 0.66994 3.27865 1.08413C3.28329 1.49832 3.62282 1.83032 4.03701 1.82567L10.0366 1.75839L10.1039 7.75801C10.1086 8.1722 10.4481 8.5042 10.8623 8.49955C11.2765 8.49491 11.6085 8.15538 11.6038 7.74119L11.5281 0.991615ZM1.53624 11.5243L11.3144 1.52437L10.2419 0.475675L0.463756 10.4757L1.53624 11.5243Z" fill="#004E9E"></path>
+															</svg>
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="alliance-appreciates__slide card-with-image slide-card">
+											<div class="slide-card__body">
+												<div class="slide-card__image bg-blue-for-image">
+													<img src="img/alliance-appreciates/01.png" alt="01">
+												</div>
+												<div class="slide-card__content">
+													<h5 class="slide-card__title">
+														Стратегия
+													</h5>
+													<p class="slide-card__text text-01">
+														Мы гарантируем качество нашей продукции и услуг, а также строго соблюдаем все договорные обязательства
+													</p>
+													<a href="#" class="button-white--border button-white--size-m">
+														<span>Узнать больше</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="alliance-appreciates__slide card-with-image slide-card">
+											<div class="slide-card__body">
+												<div class="slide-card__image bg-blue-for-image">
+													<img src="img/alliance-appreciates/01.png" alt="01">
+												</div>
+												<div class="slide-card__content">
+													<h5 class="slide-card__title">
+														Миссия
+													</h5>
+													<p class="slide-card__text text-01">
+														Мы гарантируем качество нашей продукции и услуг, а также строго соблюдаем все договорные обязательства
+													</p>
+													<a href="#" class="button-white--border button-white--size-m">
+														<span>Узнать больше</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="alliance-appreciates__slide card-with-image slide-card">
+											<div class="slide-card__body">
+												<div class="slide-card__image bg-blue-for-image">
+													<img src="img/alliance-appreciates/01.png" alt="01">
+												</div>
+												<div class="slide-card__content">
+													<h5 class="slide-card__title">
+														Ценности
+													</h5>
+													<p class="slide-card__text text-01">
+														Мы гарантируем качество нашей продукции и услуг, а также строго соблюдаем все договорные обязательства
+													</p>
+													<a href="#" class="button-white--border button-white--size-m">
+														<span>Узнать больше</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</section>
+					<!-- /.alliance-appreciates -->
+					<section class="features-slider">
+						<div class="features-slider__content">
+							<div class="features-slider__body">
+								<!-- Оболонка слайдера -->
+								<div class="features-slider__slider swiper">
+									<!-- Частина слайдера, що рухається -->
+									<div class="features-slider__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<div class="features-slider__slide features-slide swiper-slide">
+											<div class="features-slide__body">
+												<div class="features-slide__image">
+													<img src="img/features/01.png" alt="01" data-swiper-parallax="50%" data-swiper-parallax-scale="1.35">
+												</div>
+												<div class="features-slide__content" data-swiper-parallax-duration="300">
+													<h2 class="features-slide__title title-h2 color-white" data-swiper-parallax="80%" data-swiper-parallax-duration="800">
+														Logo — участник CPO,
+														имеет все необходимые для этого допуски и лицензии
+													</h2>
+													<div class="features-slide__text" data-swiper-parallax="80%" data-swiper-parallax-duration="800">
+														<p class="text-01 color-white">
+															Это подтверждает высокую квалификацию и ответственность нашей компании в области трубной продукции и строительно-монтажных работ.
+														</p>
+														<br>
+														<p class="text-01 color-white">
+															Кроме того, мы постоянно совершенствуем свои технологии и участвуем в проектах по снижению вредных воздействий на окружающую среду
+														</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+										<!-- Слайд -->
+										<div class="features-slider__slide features-slide swiper-slide">
+											<div class="features-slide__body">
+												<div class="features-slide__image">
+													<img src="img/features/01.png" alt="01" data-swiper-parallax="50%" data-swiper-parallax-scale="1.35">
+												</div>
+												<div class="features-slide__content" data-swiper-parallax-duration="300">
+													<h2 class="features-slide__title title-h2 color-white" data-swiper-parallax="80%" data-swiper-parallax-duration="800">
+														Logo — участник CPO,
+														имеет все необходимые для этого допуски и лицензии
+													</h2>
+													<div class="features-slide__text" data-swiper-parallax="80%" data-swiper-parallax-duration="800">
+														<p class="text-01 color-white">
+															Это подтверждает высокую квалификацию и ответственность нашей компании в области трубной продукции и строительно-монтажных работ.
+														</p>
+														<br>
+														<p class="text-01 color-white">
+															Кроме того, мы постоянно совершенствуем свои технологии и участвуем в проектах по снижению вредных воздействий на окружающую среду
+														</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+										<!-- Слайд -->
+										<div class="features-slider__slide features-slide swiper-slide">
+											<div class="features-slide__body">
+												<div class="features-slide__image">
+													<img src="img/features/01.png" alt="01" data-swiper-parallax="50%" data-swiper-parallax-scale="1.35">
+												</div>
+												<div class="features-slide__content" data-swiper-parallax-duration="300">
+													<h2 class="features-slide__title title-h2 color-white" data-swiper-parallax="80%" data-swiper-parallax-duration="800">
+														Logo — участник CPO,
+														имеет все необходимые для этого допуски и лицензии
+													</h2>
+													<div class="features-slide__text" data-swiper-parallax="80%" data-swiper-parallax-duration="800">
+														<p class="text-01 color-white">
+															Это подтверждает высокую квалификацию и ответственность нашей компании в области трубной продукции и строительно-монтажных работ.
+														</p>
+														<br>
+														<p class="text-01 color-white">
+															Кроме того, мы постоянно совершенствуем свои технологии и участвуем в проектах по снижению вредных воздействий на окружающую среду
+														</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+
+									</div>
+									<div class="features-slider__pagination">
+										<a href="#" class="button-features button-white--border button-white--size-s active" data-slide="0"><span>Логистика</span></a>
+										<a href="#" class="button-features button-white--border button-white--size-s" data-slide="1"><span>Автопарк</span></a>
+										<a href="#" class="button-features button-white--border button-white--size-s" data-slide="2"><span>Лицензии</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- /.features-slider -->
+				</main>
+				<footer class="footer">
+					<div class="footer__container margin-container">
+						<div class="footer__content">
+							<div class="footer__body">
+								<div class="footer__row row-top">
+									<div class="footer__col">
+										<a href="#" class="footer__logo">
+											LOGO
+										</a>
+										<p class="footer__seo">
+											Группа Logo рада предложить спектр
+											услуг в области монтажа трубопроводов, строительства промышленных объектов, поставки продукции
+										</p>
+									</div>
+									<div class="footer__col">
+										<div class="footer__menu menu">
+											<nav class="menu__body">
+												<ul class="menu__list">
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															О компании
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Клиентам
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Поставщикам
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Инвесторам
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Лицензии
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<div class="footer__col">
+										<div class="footer__menu menu">
+											<nav class="menu__body">
+												<ul class="menu__list">
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Продукция и услуги
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Карьера
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Пресс центр
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Контакты
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<div class="footer__col">
+										<div class="footer__info">
+											<div class="footer__adres">
+												<a href="#" target="_blank" rel="noopener noreferrer">
+													<span> г. Город</span>
+													ул, стр. 18Е, офис 5
+												</a>
+											</div>
+											<div class="footer__phone">
+												<a href="tel:+7 (343) 289-5-007">+7 (343) 289-5-007</a>
+											</div>
+											<div class="footer__button-callback">
+												<a href="#" class="button button-blue--border mw-250 button-with-arrow" data-ripple>
+													<span class="circle" style="left: 592px; top: 3051px;"></span>
+													<span class="button__text">
+														Обратная связь
+													</span>
+													<i>
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M11.5281 0.991615C11.5235 0.577427 11.184 0.245427 10.7698 0.250072L4.02019 0.325765C3.606 0.33041 3.274 0.66994 3.27865 1.08413C3.28329 1.49832 3.62282 1.83032 4.03701 1.82567L10.0366 1.75839L10.1039 7.75801C10.1086 8.1722 10.4481 8.5042 10.8623 8.49955C11.2765 8.49491 11.6085 8.15538 11.6038 7.74119L11.5281 0.991615ZM1.53624 11.5243L11.3144 1.52437L10.2419 0.475675L0.463756 10.4757L1.53624 11.5243Z" fill="#004E9E"></path>
+														</svg>
+													</i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="footer__row row-bottom">
+									<div class="footer__copyright">
+										2024 <br>
+										Все права защищены. Копирование материалов - запрещенно
+									</div>
+									<div class="footer__links">
+										<a href="#">Политика в области защиты и обработки персональных данных
+										</a>
+										<a href="#">
+											Настройки файлов cookie</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Стилі для body -->
+	<style>
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.loading body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body {
+			transition: opacity 0.5s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<div id="fls-preloader">
+		<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+		<!-- Стилі для прелоадера -->
+		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+				border: 0px;
+			}
+
+			*,
+			*:before,
+			*:after {
+				box-sizing: border-box;
+			}
+
+			/* Головний блок */
+		</style>
+		<!-- Скріпт прелоадера -->
+		<script>
+			function preloader() {
+				const preloaderImages = document.querySelectorAll('img');
+				const preloaderScripts = document.querySelectorAll('script[src]');
+				const preloaderStyles = document.querySelectorAll('link[rel="stylesheet"]');
+				const preloaderContainer = document.querySelector('#fls-preloader');
+
+				const totalResources = preloaderImages.length + preloaderScripts.length + preloaderStyles.length;
+				let resourcesLoaded = 0;
+
+				if (totalResources > 0) {
+					const preloaderTemplate = `
+					<div class="fls-preloader">
+						<div class="fls-preloader__body">
+              <div class="fls-preloader__logo" style="font-size: 5vw; font-family: Arial;">
+                LOGO
+              </div>
+              <div class="fls-preloader__progressbar">
+                <div class="fls-preloader__counter">0%</div>
+							  <div class="fls-preloader__line"><span></span></div>  
+              </div>
+						
+						</div>
+					</div>`;
+					document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					const
+						preloader = document.querySelector('.fls-preloader'),
+						showPecentLoad = document.querySelector('.fls-preloader__counter'),
+						showLineLoad = document.querySelector('.fls-preloader__line span'),
+						htmlDocument = document.documentElement;
+
+					let counter = progress = 0;
+
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+
+					function checkResourcesLoaded() {
+						resourcesLoaded++;
+						progress = Math.round((100 / totalResources) * resourcesLoaded);
+						setValueProgress(progress);
+
+						if (resourcesLoaded >= totalResources) {
+							addLoadedClass();
+						}
+					}
+
+					function setValueProgress(progress) {
+						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					showPecentLoad ? setValueProgress(progress) : null;
+
+					function addLoadedClass() {
+						htmlDocument.classList.add('loaded');
+						htmlDocument.classList.remove('lock');
+						htmlDocument.classList.remove('loading');
+						setInterval(() => {
+							preloader.remove();
+							preloaderContainer.remove();
+						}, 500);
+					}
+
+					preloaderImages.forEach(preloaderImage => {
+						preloaderImage.onload = checkResourcesLoaded;
+						preloaderImage.onerror = checkResourcesLoaded;
+					});
+
+					preloaderScripts.forEach(preloaderScript => {
+						preloaderScript.onload = checkResourcesLoaded;
+						preloaderScript.onerror = checkResourcesLoaded;
+					});
+
+					preloaderStyles.forEach(preloaderStyle => {
+						preloaderStyle.onload = checkResourcesLoaded;
+						preloaderStyle.onerror = checkResourcesLoaded;
+					});
+				} else {
+					preloaderContainer.remove();
+				}
+			}
+			preloader();
+		</script>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js?_v=20240328153218"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js?_v=20240328153218"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js?_v=20240328153218"></script>
+	<script src="js/app.min.js?_v=20240328153218"></script>
+
+</body>
+
+</html>
